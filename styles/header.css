@@ -1,0 +1,150 @@
+/* === HEADER / NAVBAR === */
+.navbar {
+  background: #34495e;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: transform 0.3s ease-in-out; /* animar hide/show */
+}
+
+/* ocultar header en scroll hacia abajo */
+.navbar.hide {
+  transform: translateY(-100%);
+}
+
+/* === Marca + Hamburguesa === */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 🔑 separa título y hamburguesa */
+  gap: 14px;                       /* 🔑 espacio uniforme entre ambos */
+  flex: 1;                          /* ocupa todo el ancho necesario */
+}
+
+.brand {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+/* === Lista desktop === */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 8px;
+  display: inline-block;
+  font-weight: 500;
+  word-break: break-word;
+}
+.nav-list a:hover,
+.nav-list a:focus {
+  color: #1abc9c;
+  outline: none;
+}
+
+/* === Botón hamburguesa === */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  position: relative;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.hamburger::before { top: -7px; }
+.hamburger::after  { top: 7px; }
+
+.nav-toggle[aria-expanded="true"] .hamburger {
+  background: transparent;
+}
+.nav-toggle[aria-expanded="true"] .hamburger::before {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .hamburger::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar {
+    padding: 10px 24px; /* un poquito más de aire lateral */
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    right: 16px;
+    background: rgba(52,73,94,0.98);
+    flex-direction: column;
+    gap: 0;
+    padding: 8px;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    transform-origin: top right;
+    transform: translateY(-10px) scale(.98);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .18s ease, opacity .18s ease;
+  }
+  .nav-list.open {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-list li {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-list li:last-child {
+    border-bottom: none;
+  }
+  .nav-list a {
+    padding: 12px 16px;
+    display: block;
+  }
+  .brand {
+    font-size: 1rem;
+  }
+}
+
+/* === Ajuste para que el contenido no quede oculto tras el header fijo === */
+body {
+  padding-top: 70px; /* altura aproximada del header */
+}

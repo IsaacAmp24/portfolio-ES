@@ -1,0 +1,131 @@
+/* style.css (mobile-first) */
+:root{
+  --bg: #f8f9fa;
+  --text: #333;
+  --muted: #555;
+  --maxwidth: 1100px;
+}
+
+/* Romper URLs y textos muy largos */
+.referencia,
+.referencias li,
+p,
+li {
+  overflow-wrap: break-word; /* CSS3 estándar */
+  word-wrap: break-word;     /* fallback legacy */
+  word-break: break-word;    /* algunos navegadores */
+  white-space: normal;       /* por si algún reset puso nowrap */
+}
+
+
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  width: 100%;
+  max-width: 100%;
+}
+
+.section {
+  padding: 28px 12px;
+  max-width: var(--maxwidth);
+  margin: auto;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.referencia {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* layout for larger screens */
+@media (min-width: 768px) {
+  .section {
+    padding: 40px 20px;
+  }
+  h2 { font-size: 1.8rem; }
+  .media-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* desktop: 3 columns grid */
+@media (min-width: 1100px) {
+  h2 { font-size: 2rem; }
+  .media-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Improve readability on small screens */
+@media (max-width: 420px) {
+  .brand { font-size: 0.95rem; }
+  .section { padding: 22px 10px; }
+  h2 { font-size: 1.25rem; }
+}
+
+/* Footer alignment */
+footer {
+  text-align: center;
+  padding: 18px 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Optional: helper for visually hidden content */
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+#autoria img {
+  width: 260px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+#autoria p {
+  max-width: 600px;
+  margin: 12px auto 0 auto;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  text-align: center;
+  padding: 0 10px;
+}
+
+#autoria figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 6px;
+  text-align: center;
+}

@@ -1,11 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Académico - Jose Ampudia</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/header.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+<header>
+  <nav class="navbar" role="navigation" aria-label="Menú principal">
+    <div class="nav-brand">
+      <h1 class="brand">Portafolio Académico</h1>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+    <ul id="primary-navigation" class="nav-list">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#contenido">Contenido</a></li>
+      <li><a href="#multimedia">Multimedia</a></li>
+      <li><a href="#ia">Inteligencia Artificial</a></li>
+      <li><a href="#autoria">Autoría</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- 2. INICIO -->
+<section id="inicio" class="section">
+  <h2>Inicio</h2>
+  <p>
+    El presente portafolio aborda dos ejes fundamentales para la gestión moderna de la información del aprendizaje:
+    el uso de herramientas digitales que optimizan la administración de contenidos y procesos académicos,
+    y las técnicas de análisis de datos que permiten convertir la información recolectada en estrategias
+    de mejora educativa. Ambos temas responden a la necesidad de que docentes y estudiantes
+    desarrollen competencias para manejar entornos digitales y tomar decisiones basadas en evidencias.
+  </p>
+  <figure>
+    <img src="./assets/de.png"
+         alt="El conocimiento como el centro de las actividades de las organizaciones">
+    <figcaption>
+      Representación de un sistema de gestión del aprendizaje (Freitas, V. y Yáber, G., 2014).
+    </figcaption>
+  </figure>
+</section>
+
+<!-- 3. CONTENIDO -->
+<section id="contenido" class="section">
+  <h2>Contenido</h2>
+  <h3>Uso de herramientas digitales para optimizar la gestión del aprendizaje</h3>
+  <p>
+    Las plataformas de gestión del aprendizaje (LMS) como Moodle, Canvas o Google Classroom
+    permiten centralizar materiales, actividades y evaluaciones, facilitando el seguimiento
+    del progreso académico y la interacción entre docentes y estudiantes
+    (García & López, 2024). <strong>[Cita indirecta parentética]</strong>
+  </p>
+  <p>
+    Según Pérez (2024), la adopción de estas herramientas digitales no solo mejora
+    la organización de los contenidos, sino que también promueve la autonomía
+    y el aprendizaje colaborativo. <strong>[Cita indirecta narrativa]</strong>
+  </p>
+
+  <h3>Técnicas de análisis de datos para mejorar el aprendizaje</h3>
+  <p>
+    El análisis de datos educativos transforma registros de asistencia, calificaciones
+    y participación en información útil para personalizar la enseñanza y anticipar
+    riesgos de deserción. La implementación de dashboards y métricas predictivas
+    permite tomar decisiones pedagógicas más precisas (Martínez et al., 2023).
+  </p>
+
+  <h3>Referencias</h3>
+  <ul class="referencias">
+    <li>García, P., & López, R. (2024). <i>Plataformas digitales para la gestión académica</i>. Revista Iberoamericana de Educación, 18(2), 33–47.</li>
+    <li>Martínez, L., Ramos, S., & Vega, F. (2023). <i>Learning analytics en entornos virtuales</i>. Editorial Académica.</li>
+    <li>Pérez, L. (2024). <i>Innovación educativa y herramientas digitales</i>. Editorial Universitaria.</li>
+    <li>Smith, J. (2023). <i>Learning management system diagram</i> [Imagen]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Learning_management_system_diagram.jpg</li>
+  </ul>
+</section>
+
+<!-- 4. MULTIMEDIA -->
+<section id="multimedia" class="section">
+  <h2>Multimedia</h2>
+  <div class="media-grid">
+    <article>
+      <h3>Infografía</h3>
+      <img src="./assets/imag.png" alt="Infografía de herramientas digitales">
+      <p>Infografía creada con Canva AI que resume las principales plataformas digitales para la gestión del aprendizaje.</p>
+      <p class="referencia">Referencia: Canva AI (2025). Infografía generada con IA.</p>
+    </article>
+    <article>
+      <h3>Gráfico de Análisis de Datos</h3>
+      <img src="./assets/aa.png" alt="Gráfico de análisis de datos educativos">
+      <p>Gráfico generado con ChatGPT + Python que muestra un ejemplo de correlación entre
+         el uso de plataformas LMS y el rendimiento académico.</p>
+      <p class="referencia">Referencia: ChatGPT + Python (2025). Gráfico generado con IA.</p>
+    </article>
+    <article>
+      <h3>Video Explicativo</h3>
+      <video controls width="320">
+        <source src="media/video_analitica.mp4" type="video/mp4">
+      </video>
+      <p>Video generado con Runway ML que explica cómo la analítica de aprendizaje mejora la toma de decisiones en las aulas virtuales.</p>
+      <p class="referencia">Referencia: Runway ML (2025). Video generado con IA.</p>
+    </article>
+  </div>
+</section>
+
+<!-- 5. INTELIGENCIA ARTIFICIAL -->
+<section id="ia" class="section">
+  <h2>Inteligencia Artificial</h2>
+  <p>
+    Para la elaboración de los recursos se emplearon varias herramientas de IA:
+  </p>
+  <ul>
+    <li><strong>ChatGPT:</strong> redacción de los textos académicos y generación de ideas para citas y prompts.</li>
+    <li><strong>Canva AI:</strong> creación de infografías visuales sobre plataformas de gestión.</li>
+    <li><strong>Runway ML:</strong> producción de videos explicativos con imágenes y narración generada.</li>
+  </ul>
+  <p><strong>Prompt ejemplo usado en ChatGPT:</strong>
+    “Genera un texto académico que explique las ventajas del uso de herramientas digitales y técnicas de análisis de datos en la educación,
+    incluyendo una cita indirecta parentética y una narrativa”.</p>
+  <p>
+    <strong>Ventajas:</strong> agiliza la creación de materiales, mejora la presentación de la información y fomenta la creatividad.<br>
+    <strong>Limitaciones:</strong> requiere verificación de datos, control de sesgos y una revisión crítica por parte del autor.
+  </p>
+</section>
+
+<!-- 6. AUTORÍA -->
+<section id="autoria" class="section">
+  <h2>Autoría</h2>
+  <figure>
+    <img src="./assets/e.png" alt="Retrato generado con IA">
+    <figcaption>Retrato generado con IA (DALL·E, 2025).</figcaption>
+  </figure>
+  <p><strong>Nombre:</strong> Estrella Nicole Aguilar Sanchez</p>
+  <p><strong>Carrera:</strong> Administración y negocios internacionales</p>
+  <p><strong>Intereses:</strong> Soy estudiante de Administración y Negocios Internacionales con interés en el comercio exterior, la negociación intercultural y el desarrollo de proyectos de exportación. Me apasiona el análisis de mercados emergentes, la gestión de negocios sostenibles y las estrategias de marketing internacional, buscando aplicar mis conocimientos para impulsar la expansión de empresas en un entorno global competitivo.</p>
+</section>
+
+<footer>
+  <p>© 2025 ES - Portafolio Académico</p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
